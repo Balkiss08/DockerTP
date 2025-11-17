@@ -1,0 +1,9 @@
+com\balkiss\marquemicroservice\MarqueMicroserviceApplication.class
+com\balkiss\marquemicroservice\service\MarqueService.class
+com\balkiss\marquemicroservice\entities\Marque.class
+com\balkiss\marquemicroservice\dto\MarqueDto.class
+com\balkiss\marquemicroservice\restControllers\MarqueController.class
+com\balkiss\marquemicroservice\service\MarqueServiceImpl.class
+com\balkiss\marquemicroservice\entities\Marque$MarqueBuilder.class
+com\balkiss\marquemicroservice\config\Configuration.class
+com\balkiss\marquemicroservice\repos\MarqueRepository.class
