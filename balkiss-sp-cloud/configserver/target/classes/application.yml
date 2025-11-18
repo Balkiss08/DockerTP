@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Balkiss08/config-repo.git
+          default-label: main
+          clone-on-start: true
+
+server:
+  port: 9999
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "config,info,health"

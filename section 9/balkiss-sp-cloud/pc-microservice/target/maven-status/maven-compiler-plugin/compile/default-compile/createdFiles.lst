@@ -1,0 +1,11 @@
+com\balkiss\pcs\dto\PcDto.class
+com\balkiss\pcs\entities\Pc$PcBuilder.class
+com\balkiss\pcs\repos\PcRepository.class
+com\balkiss\pcs\service\APIClient.class
+com\balkiss\pcs\PcMicroserviceApplication.class
+com\balkiss\pcs\entities\Pc.class
+com\balkiss\pcs\service\PcService.class
+com\balkiss\pcs\controller\PcController.class
+com\balkiss\pcs\service\PcServiceImpl.class
+com\balkiss\pcs\dto\MarqueDto.class
+com\balkiss\pcs\dto\APIResponseDto.class
