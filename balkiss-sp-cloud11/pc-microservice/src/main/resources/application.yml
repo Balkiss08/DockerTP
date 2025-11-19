@@ -1,0 +1,55 @@
+server:
+  port: 8082
+
+spring:
+  # rabbitmq:
+  #   host: "localhost"
+  #   port: 5672
+  #   username: "guest"
+  #   password: "guest"
+
+  config:
+    import: optional:configserver:${CONFIG_SERVICE_URL:http://localhost:9999}
+
+  application:
+    name: pc
+
+  datasource:
+    url: 'jdbc:h2:mem:pcsdb'
+
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  cloud:
+    openfeign:
+      circuitbreaker:
+       enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+
+eureka:
+  instance:
+    instance-id:  localhost
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: ${DISCOVERY_SERVICE_URL:http://localhost:8761/eureka}
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      slidingWindowSize: 10
+      permittedNumberOfCallsInHalfOpenState: 2
+      failureRateThreshold: 50
+      waitDurationInOpenState: 10000
